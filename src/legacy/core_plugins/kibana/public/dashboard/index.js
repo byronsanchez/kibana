@@ -60,6 +60,8 @@ uiRoutes
   .when(DashboardConstants.LANDING_PAGE_PATH, {
     template: dashboardListingTemplate,
     controller($injector, $location, $scope, Private, config, i18n) {
+
+      console.log('in dashboard landing page');
       const services = Private(SavedObjectRegistryProvider).byLoaderPropertiesName;
       const kbnUrl = $injector.get('kbnUrl');
       const dashboardConfig = $injector.get('dashboardConfig');
